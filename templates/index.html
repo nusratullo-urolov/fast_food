@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fast-food.uz</title>
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+  </head>
+  <body>
+    <!-- SITE HEADER HERO START -->
+    <div class="header-top">
+      <!-- HEADER START -->
+      <header class="site-header">
+        <div class="container">
+          <div class="site-header__wrapper navbar navbar-expand-md">
+            <a class="site-header__logo d-md-none d-block" href="./index.html">
+              <a class="site-header__logo" href="./index.html">
+                <img
+                  width="60"
+                  height="50"
+                  border-radius="50"
+                  src="{% static 'images/logo1.jpg'%}"
+                  alt="logo"
+                />
+              </a>
+            </a>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapsibleNavbar"
+            >
+              <img
+                class="menu-burger-icon"
+                src="{% static '/images/icons' %}/menu-burger.svg"
+                alt="Menu Burger"
+              />
+            </button>
+
+            <div class="site-header__start">
+              <nav class="site-nav">
+                <ul class="site-nav__list">
+                  <li class="site-nav__item">
+                    <a class="site-nav__link" href="#">Menyu</a>
+                  </li>
+                  <li class="site-nav__item">
+                    <a class="site-nav__link" href="#">Bolalar uchun</a>
+                  </li>
+                  <li class="site-nav__item">
+                    <a class="site-nav__link" href="#">Filiallar</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="site-header__end">
+              <a class="site-header__phone-number" href="tel:+998712005400">
+                <span class="phone-number__kod"> (+99871) </span>
+                200-54-00
+              </a>
+
+              <a class="site-header__korzina" href="#">
+                Korzina
+                <span class="korzina-text"> 125,400 UZS </span>
+              </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <div class="d-md-none d-block">
+                <nav class="site-nav">
+                  <ul class="site-nav__list">
+                    <li class="site-nav__item">
+                      <a class="site-nav__link" href="#">Menyu</a>
+                    </li>
+                    <li class="site-nav__item">
+                      <a class="site-nav__link" href="#">Bolalar uchun</a>
+                    </li>
+                    <li class="site-nav__item">
+                      <a class="site-nav__link" href="#">Filiallar</a>
+                    </li>
+                  </ul>
+                </nav>
+
+                <a class="site-header__phone-number" href="tel:+998712005400">
+                  <span class="phone-number__kod"> (+99871) </span>
+                  200-54-00
+                </a>
+
+                <a class="site-header__korzina" href="#">
+                  Korzina
+                  <span class="korzina-text"> 125,400 UZS </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- HEADER END -->
+
+      <!-- HERO SECTION START -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-section__wrapper">
+            <img
+              class="hero-section__img"
+              src="{% static '/images/hero-burger.png' %}"
+              srcset="
+                {% static '/images/hero-burger.png    1x,' %}
+                {% static '/images/hero-burger@2x.png 2x' %}
+              "
+              alt="Burger"
+            />
+
+            <div class="hero-section__start">
+              <h1 class="hero-section__info--title">
+                Siz izlagan mazzali ta’mlar
+              </h1>
+
+              <p class="hero-section__info--desc">
+                When an unknown printer took a galley of type scrambled it to
+                make a type specimen
+              </p>
+
+              <ul class="hero-section__box--list">
+                <li class="hero-section__box--item box--item__pizza">
+                  <a class="hero-section__box--link" href="#" role="button">
+                    Yangi
+                  </a>
+
+                  <div class="d-flex">
+                    <p class="hero-section__box--title">
+                      PIT
+                      <span class="hero-section__box--text"> -SA </span>
+                    </p>
+
+                    <img
+                      class="hero-section__box--img"
+                      src="{% static '/images/pizza-half.png' %}"
+                      srcset="
+                        {% static '/images/pizza-half.png    1x,' %}
+                        {% static '/images/pizza-half@2x.png 2x' %}
+                      "
+                      width="153"
+                      height="149"
+                      alt="Pizza half"
+                    />
+                  </div>
+                </li>
+                <li class="hero-section__box--item box--item__kombo">
+                  <a
+                    class="hero-section__box--link box--link__kombo"
+                    href="#"
+                    role="button"
+                  >
+                    Ko’p sotilgan
+                  </a>
+
+                  <div class="d-flex">
+                    <p class="hero-section__box--title box--title__kombo">
+                      <span class="hero-section__box--text box--text__kombo">
+                        KOM
+                      </span>
+                      -BO
+                    </p>
+
+                    <img
+                      class="hero-section__box--img"
+                      src="{% static '/images/kombo-half.png' %}"
+                      srcset="
+                        {% static '/images/kombo-half.png    1x,' %}
+                        {% static '/images/kombo-half@2x.png 2x' %}
+                      "
+                      width="153"
+                      height="149"
+                      alt="Pizza half"
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="hero-section__end">
+              <img
+                class="hero-section__end--img"
+                src="{% static '/images/hero-burger.png' %}"
+                srcset="
+                  {% static '/images/hero-burger.png    1x,' %}
+                  {% static '/images/hero-burger@2x.png 2x' %}
+                "
+                alt="Burger"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- HERO SECTION END -->
+    </div>
+    <!-- SITE HEADER HERO END -->
+
+    <!-- SITE HEADER HERO MOBILE START -->
+    <ul class="hero-section__box--list__mobile">
+      <li class="hero-section__box--item box--item__pizza">
+        <a class="hero-section__box--link" href="#" role="button"> Yangi </a>
+
+        <div class="d-flex">
+          <p class="hero-section__box--title">
+            PIT
+            <span class="hero-section__box--text"> -SA </span>
+          </p>
+
+          <img
+            class="hero-section__box--img"
+            src="{% static '/images/pizza-half.png' %}"
+            srcset="{% static '/images/pizza-half.png 1x, /images/pizza-half@2x.png 2x' %}"
+            width="153"
+            height="149"
+            alt="Pizza half"
+          />
+        </div>
+      </li>
+      <li class="hero-section__box--item box--item__kombo">
+        <a
+          class="hero-section__box--link box--link__kombo"
+          href="#"
+          role="button"
+        >
+          Ko’p sotilgan
+        </a>
+
+        <div class="d-flex">
+          <p class="hero-section__box--title box--title__kombo">
+            <span class="hero-section__box--text box--text__kombo"> KOM </span>
+            -BO
+          </p>
+
+          <img
+            class="hero-section__box--img"
+            src="{% static '/images/kombo-half.png' %}"
+            srcset="{% static '/images/kombo-half.png 1x, /images/kombo-half@2x.png 2x' %}"
+            width="153"
+            height="149"
+            alt="Pizza half"
+          />
+        </div>
+      </li>
+    </ul>
+    <!-- SITE HEADER HERO MOBILE END -->
+
+    <!-- MAIN START -->
+    <main class="site-main">
+      <!-- PRODUCTS SECTION START -->
+      <section class="products-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <!-- Nav pills -->
+              <ul class="nav nav-pills nav-justified">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="pill" href="#all"
+                    >Barchasi</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="pill" href="#pizza">Pitsa</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="pill" href="#burger"
+                    >Burger</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="pill" href="#kombo">Kombo</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="pill" href="#salat">Salat</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="pill" href="#sweets"
+                    >Shirinliklar</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="pill" href="#drinks"
+                    >Ichimliklar</a
+                  >
+                </li>
+                <li class="nav-btn">
+                  <button class="btn btn-secondary" type="button">Filtr</button>
+                </li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane container active" id="all">
+                  <section class="pizza-section">
+                    <h2 class="fast-food-section__title">Pitsa</h2>
+
+                    <div class="row">
+                        {% for pizza in pizzas %}
+                      <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="pizza-card">
+                          <div class="pizza-card__start">
+                            <div class="pizza-card__circle">
+                              <img
+                                class="pizza-card__circle-img"
+                                src="{% static '/images/icons/fire.svg' %}"
+                                alt="Fire icon"
+                              />
+                            </div>
+                            <img
+                              class="pizza-card__img"
+                              src="{{ pizza.image.url }}"
+                              srcset="
+                                {{ pizza.image.url }}
+                                {{ pizza.image.url }}
+                              "
+                              width="180"
+                              height="180"
+                              alt="{{ pizza.name }}"
+                            />
+                          </div>
+                          <div class="pizza-card__end">
+                            <h3 class="pizza-card__title pizza-title__gavaya">
+                                {{ pizza.name }}
+                            </h3>
+                            <p class="pizza-card__text">
+                              {{ pizza.description }}
+                            </p>
+
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <p class="pizza-card__price">{{ pizza.price }} UZS</p>
+
+                              <button
+                                class="btn btn-warning pizza-btn"
+                                type="button"
+                              >
+                                +
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                        {% endfor %}
+                    </div>
+                  </section>
+
+                  <section class="burger-section pizza-section">
+                    <h2 class="burger-section__title fast-food-section__title">
+                      Burger
+                    </h2>
+
+                    <div class="row">
+                        {% for burger in burgers %}
+                      <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="pizza-card">
+                          <div class="pizza-card__start">
+                            <div class="pizza-card__circle">
+                              <img
+                                class="pizza-card__circle-img"
+                                src="{% static '/images/icons/fire.svg' %}"
+                                alt="Fire icon"
+                              />
+                            </div>
+                            <img
+                              class="pizza-card__img"
+                              src="{{ burger.image.url }}"
+                              srcset="
+                                {{ burger.image.url }}
+                                {{ burger.image.url }}
+                              "
+                              width="180"
+                              height="180"
+                              alt="{{ burger.name }}"
+                            />
+                          </div>
+                          <div class="pizza-card__end">
+                            <h3 class="pizza-card__title pizza-title__gavaya">
+                                {{ burger.name }}
+                            </h3>
+                            <p class="pizza-card__text">
+                              {{ burger.description }}
+                            </p>
+
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <p class="pizza-card__price">{{ burger.price }} UZS</p>
+
+                              <button
+                                class="btn btn-warning pizza-btn"
+                                type="button"
+                              >
+                                +
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                        {% endfor %}
+                    </div>
+                  </section>
+
+                  <section class="kombo-section pizza-section">
+                    <h2 class="burger-section__title fast-food-section__title">
+                      Kombo
+                    </h2>
+
+                    <div class="row">
+                        {% for kombo in kombos %}
+                      <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="pizza-card">
+                          <div class="pizza-card__start">
+                            <img
+                              class="pizza-card__img"
+                              src="{{ kombo.image.url }}"
+                              srcset="
+                                {{ kombo.image.url }}
+                                {{ kombo.image.url }}
+                              "
+                              width="180"
+                              height="180"
+                              alt="{{ kombo.name }}"
+                            />
+                          </div>
+                          <div class="pizza-card__end">
+                            <h3 class="pizza-card__title">{{ kombo.name }}</h3>
+                            <p class="pizza-card__text">
+                              {{ kombo.description }}
+                            </p>
+
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <p class="pizza-card__price">{{ kombo.price }} UZS</p>
+
+                              <button
+                                class="btn btn-warning pizza-btn"
+                                type="button"
+                              >
+                                +
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                        {% endfor %}
+                    </div>
+                  </section>
+
+                  <section class="kombo-section pizza-section">
+                    <h2 class="burger-section__title fast-food-section__title">
+                      Ichimliklar
+                    </h2>
+
+                    <div class="row">
+                        {% for drink in drinks %}
+                      <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="pizza-card">
+                          <div class="pizza-card__start">
+                            <img
+                              class="pizza-card__img"
+                              src="{{ drink.image.url }}"
+                              srcset="
+                                {{ drink.image.url }}
+                                {{ drink.image.url }}
+                              "
+                              width="180"
+                              height="180"
+                              alt="{{ drink.name }}"
+                            />
+                          </div>
+                          <div class="pizza-card__end">
+                            <h3 class="pizza-card__title">{{ drink.name }}</h3>
+                            <p class="pizza-card__text">
+                              {{ drink.description }}
+                            </p>
+
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <p class="pizza-card__price">{{ drink.price }} UZS</p>
+
+                              <button
+                                class="btn btn-warning pizza-btn"
+                                type="button"
+                              >
+                                +
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                        {% endfor %}
+                    </div>
+                  </section>
+                </div>
+
+                <div class="tab-pane container fade" id="pizza">
+                  <section class="pizza-section">
+                    <h2 class="pizza-section__title">Pitsa</h2>
+
+                    <div class="row">
+                        {% for pizza in pizzas %}
+                      <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="pizza-card">
+                          <div class="pizza-card__start">
+                            <div class="pizza-card__circle">
+                              <img
+                                class="pizza-card__circle-img"
+                                src="{% static '/images/icons/fire.svg' %}"
+                                alt="Fire icon"
+                              />
+                            </div>
+                            <img
+                              class="pizza-card__img"
+                              src="{{ pizza.image.url }}"
+                              srcset="
+                                {{ pizza.image.url }}
+                                {{ pizza.image.url }}
+                              "
+                              width="180"
+                              height="180"
+                              alt="{{ pizza.name }}"
+                            />
+                          </div>
+                          <div class="pizza-card__end">
+                            <h3 class="pizza-card__title pizza-title__gavaya">
+                              {{ pizza.name }}
+                            </h3>
+                            <p class="pizza-card__text">
+                              {{ pizza.description }}
+                            </p>
+
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <p class="pizza-card__price">{{ pizza.price }} UZS</p>
+
+                              <button
+                                class="btn btn-warning pizza-btn"
+                                type="button"
+                              >
+                                +
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                        {% endfor %}
+                    </div>
+                  </section>
+                </div>
+                <div class="tab-pane container fade" id="burger">
+                  <section class="burger-section pizza-section">
+                    <h2 class="burger-section__title fast-food-section__title">
+                      Burger
+                    </h2>
+
+                    <div class="row">
+                        {% for burger in burgers %}
+                      <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="pizza-card">
+                          <div class="pizza-card__start">
+                            <div class="pizza-card__circle">
+                              <img
+                                class="pizza-card__circle-img"
+                                src="{% static '/images/icons/fire.svg' %}"
+                                alt="Fire icon"
+                              />
+                            </div>
+                            <img
+                              class="pizza-card__img"
+                              src="{{ burger.image.url }}"
+                              srcset="
+                                {{ burger.image.url }}
+                                {{ burger.image.url }}
+                              "
+                              width="180"
+                              height="180"
+                              alt="{{ burger.name }}"
+                            />
+                          </div>
+                          <div class="pizza-card__end">
+                            <h3 class="pizza-card__title pizza-title__gavaya">
+                              {{ burger.name }}
+                            </h3>
+                            <p class="pizza-card__text">
+                              {{ burger.description }}
+                            </p>
+
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <p class="pizza-card__price">{{ burger.price }} UZS</p>
+
+                              <button
+                                class="btn btn-warning pizza-btn"
+                                type="button"
+                              >
+                                +
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                        {% endfor %}
+                    </div>
+                  </section>
+                </div>
+                <div class="tab-pane container fade" id="kombo">
+                  <section class="kombo-section pizza-section">
+                    <h2 class="burger-section__title fast-food-section__title">
+                      Kombo
+                    </h2>
+
+                    <div class="row">
+                        {% for kombo in kombos %}
+                      <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="pizza-card">
+                          <div class="pizza-card__start">
+                            <img
+                              class="pizza-card__img"
+                              src="{{ kombo.image.url }}"
+                              srcset="
+                                {{ kombo.image.url }}
+                                {{ kombo.image.url }}
+                              "
+                              width="180"
+                              height="180"
+                              alt="{{ kombo.name }}"
+                            />
+                          </div>
+                          <div class="pizza-card__end">
+                            <h3 class="pizza-card__title">{{ kombo.name }}</h3>
+                            <p class="pizza-card__text">
+                              {{ kombo.description }}
+                            </p>
+
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <p class="pizza-card__price">{{ kombo.price }} UZS</p>
+
+                              <button
+                                class="btn btn-warning pizza-btn"
+                                type="button"
+                              >
+                                +
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                        {% endfor %}
+                    </div>
+                  </section>
+                </div>
+                <div class="tab-pane container fade" id="salat">
+                  <section class="kombo-section pizza-section">
+                    <h2 class="burger-section__title fast-food-section__title">
+                      Salatlar
+                    </h2>
+                      <div class="row">
+                        {% for salat in salats %}
+                      <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="pizza-card">
+                          <div class="pizza-card__start">
+                            <img
+                              class="pizza-card__img"
+                              src="{{ salat.image.url }}"
+                              srcset="
+                                {{ salat.image.url }}
+                                {{ salat.image.url }}
+                              "
+                              width="180"
+                              height="180"
+                              alt="{{ salat.name }}"
+                            />
+                          </div>
+                          <div class="pizza-card__end">
+                            <h3 class="pizza-card__title">{{ salat.name }}</h3>
+                            <p class="pizza-card__text">
+                              {{ salat.description }}
+                            </p>
+
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <p class="pizza-card__price">{{ salat.price }} UZS</p>
+
+                              <button
+                                class="btn btn-warning pizza-btn"
+                                type="button"
+                              >
+                                +
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                        {% endfor %}
+                    </div>
+                  </section>
+                </div>
+
+
+                <div class="tab-pane container fade" id="sweets">
+                  <section class="kombo-section pizza-section">
+                    <h2 class="burger-section__title fast-food-section__title">
+                      Shirinliklar
+                    </h2>
+                      <div class="row">
+                        {% for sweet in sweets %}
+                      <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="pizza-card">
+                          <div class="pizza-card__start">
+                            <img
+                              class="pizza-card__img"
+                              src="{{ sweet.image.url }}"
+                              srcset="
+                                {{ sweet.image.url }}
+                                {{ sweet.image.url }}
+                              "
+                              width="180"
+                              height="180"
+                              alt="{{ sweet.name }}"
+                            />
+                          </div>
+                          <div class="pizza-card__end">
+                            <h3 class="pizza-card__title">{{ sweet.name }}</h3>
+                            <p class="pizza-card__text">
+                              {{ sweet.description }}
+                            </p>
+
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <p class="pizza-card__price">{{ sweet.price }} UZS</p>
+
+                              <button
+                                class="btn btn-warning pizza-btn"
+                                type="button"
+                              >
+                                +
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                        {% endfor %}
+                    </div>
+                  </section>
+                </div>
+                <div class="tab-pane container fade" id="drinks">
+                  <section class="kombo-section pizza-section">
+                    <h2 class="burger-section__title fast-food-section__title">
+                      Ichimliklar
+                    </h2>
+
+                    <div class="row">
+                        {% for drink in drinks %}
+                      <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="pizza-card">
+                          <div class="pizza-card__start">
+                            <img
+                              class="pizza-card__img"
+                              src="{{ drink.image.url }}"
+                              srcset="
+                                {{ drink.image.url }}
+                                {{ drink.image.url }}
+                              "
+                              width="180"
+                              height="180"
+                              alt="Sprite"
+                            />
+                          </div>
+                          <div class="pizza-card__end">
+                            <h3 class="pizza-card__title">{{ drink.name }}</h3>
+                            <p class="pizza-card__text">
+                              {{ drink.description }}
+                            </p>
+
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <p class="pizza-card__price">{{ drink.price }} UZS</p>
+
+                              <button
+                                class="btn btn-warning pizza-btn"
+                                type="button"
+                              >
+                                +
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                        {% endfor %}
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PRODUCTS SECTION END -->
+    </main>
+    <!-- MAIN END -->
+
+    <!-- FOOTER START -->
+    <footer class="site-footer">
+      <!-- SITE FOOTER TOP START -->
+      <section class="site-footer-top">
+        <div class="container">
+          <div class="site-footer-top__wrapper d-flex">
+            <div class="site-footer-top__start">
+              <h2 class="site-footer-top__title">
+                Mobil ilovamiz <br />
+                orqali buyurtma <br />
+                berish yanada osonroq
+              </h2>
+              <div class="d-flex">
+                <a class="site__google-play" href="./index.html">
+                  <svg
+                    width="41"
+                    height="46"
+                    viewBox="0 0 41 46"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.393616 3.92892V42.1512C0.393616 43.4816 1.17362 44.6319 2.30672 45.1807L24.7367 23.0335L2.31572 0.89502C1.17782 1.44212 0.393616 2.59512 0.393616 3.92892ZM7.55332 43.7521L31.8964 30.1569L26.7521 25.1807L7.55332 43.7521ZM39.2296 21.0347C39.9945 21.6608 40.488 22.6473 40.488 23.7569C40.488 24.8499 40.0095 25.8232 39.2642 26.4504L34.3787 29.4664L29.0325 23.7503L34.3751 18.0378L39.2296 21.0347ZM31.8964 15.9188L7.55332 2.32352L26.7521 20.895L31.8964 15.9188Z"
+                      fill="white"
+                    />
+                  </svg>
+                  Google play
+                </a>
+                <a class="site__app-store" href="./index.html">
+                  <svg
+                    width="38"
+                    height="47"
+                    viewBox="0 0 38 47"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M28.3143 0.0527344C25.9894 0.150234 23.1723 1.60133 21.505 3.55213C20.0062 5.28463 18.6979 8.04953 19.0506 10.7006C21.6463 10.9037 24.2912 9.38323 25.907 7.43143C27.5195 5.47613 28.6113 2.76253 28.3143 0.0527344ZM27.6571 46.1911C30.8072 46.1324 32.8024 43.3333 34.7312 40.5169C36.8445 37.4322 37.7778 34.4414 37.9171 33.995C37.9248 33.9701 37.9301 33.9532 37.933 33.9445C37.9316 33.9439 37.9277 33.9423 37.9214 33.9398C37.6192 33.817 31.7878 31.4488 31.7299 24.6021C31.6729 18.9477 36.1869 16.1353 36.6826 15.8265C36.6997 15.8158 36.712 15.8081 36.7192 15.8034C34.003 11.8348 29.7737 11.2907 28.2667 11.2285C26.0655 11.0062 23.93 11.8468 22.1851 12.5337C21.0763 12.9702 20.1253 13.3445 19.4154 13.3445C18.6253 13.3445 17.6482 12.9571 16.5516 12.5223C15.1164 11.9532 13.4765 11.3029 11.7835 11.334C7.8621 11.3927 4.2434 13.6142 2.2239 17.1253C-1.8543 24.1953 1.1781 34.6717 5.151 40.4042C7.0957 43.2079 9.4081 46.3634 12.4492 46.2498C13.807 46.1954 14.7733 45.7843 15.7727 45.3591C16.9277 44.8677 18.1269 44.3575 20.0255 44.3575C21.8337 44.3575 22.9773 44.8519 24.0773 45.3275C25.1294 45.7823 26.1415 46.2198 27.6571 46.1911Z"
+                      fill="white"
+                    />
+                  </svg>
+                  App Store
+                </a>
+              </div>
+            </div>
+            <div class="site-footer-top__end">
+              <img
+                class="site-footer-top__img"
+                src="{% static '/images/phone.png' %}"
+                srcset="{% static '/images/phone.png' %}"
+                width="708"
+                height="404"
+                alt="Phone"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SITE FOOTER TOP END -->
+      <!-- SITE FOOTER BOTTOM START -->
+      <section class="site-footer-bottom">
+        <div class="container">
+          <div class="site-footer-bottom__wrapper"></div>
+        </div>
+      </section>
+      <!-- SITE FOOTER BOTTOM END -->
+    </footer>
+    <!-- FOOTER END -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+      integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
