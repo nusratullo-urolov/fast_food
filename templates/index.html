@@ -78,6 +78,11 @@
                     <li class="site-nav__item">
                         <a class="site-nav__link" href="#">Filiallar</a>
                     </li>
+                    {% if user.is_authenticated %}
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="{% url 'logout' %}">Logout</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </nav>
         </div>

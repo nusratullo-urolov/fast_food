@@ -1,11 +1,15 @@
 from django.conf.urls.static import static
 from django.urls import path
 
-from apps.views import index_view, add_to_cart, show_cart, remove_cart_item, payment_options
+from apps.views import index_view, add_to_cart, show_cart, remove_cart_item, payment_options, register, login_1, \
+    logout_view
 from root import settings
 
 urlpatterns = [
     path('', index_view, name='index_view'),
+    path('register/', register, name='register'),
+    path('login/', login_1, name='login'),
+    path('logout/', logout_view, name='logout'),
     path('add-to-cart/<int:id>', add_to_cart, name='add_to_cart'),
     path('show-cart',show_cart,name='show_cart'),
     path('cart/remove/<int:item_id>/', remove_cart_item, name='remove_cart_item'),

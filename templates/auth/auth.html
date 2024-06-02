@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+{% load static %}
+<html class="wide wow-animation scrollTo" lang="en">
+
+<head>
+    <!-- Site Title-->
+    <title>Auth</title>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="keywords" content="intense web design multipurpose template">
+    <meta name="date" content="Dec 26">
+    <link rel="icon" href="'{% static 'images/favicon.ico' %}'" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css"
+        href="//fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,700%7CMerriweather:400,300,300italic,400italic,700,700italic">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="preloader-body">
+            <div class="cssload-container">
+                <div class="cssload-speeding-wheel"></div>
+            </div>
+            <p>Loading...</p>
+        </div>
+    </div>
+    <!-- Page-->
+    <div class="page text-center">
+
+        <section class="section section-xl bg-default">
+            <div class="container">
+                <div class="row justify-content-sm-center section-34">
+                    <div class="col-sm-8 col-md-6 col-lg-5 ">
+                        <div   ><img class="overflow-hidden  rounded-circle" width='250' height='250' src='{% static 'images/image_2024-04-25_01-14-29.png' %}' alt=''/>
+                        </div>
+                        <h2 class="fw-bold">FastFood</h2>
+                        <hr class="divider bg-madison">
+                        <div class="offset-sm-top-45 text-center">
+                            <!--Bootstrap tabs-->
+                            <div class="tabs-custom tabs-horizontal tabs-line" id="tabs-1">
+                                <!--Nav tabs-->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-login-1"
+                                            data-bs-toggle="tab">Login</a></li>
+                                    <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-login-2"
+                                            data-bs-toggle="tab">Registration</a></li>
+                                </ul>
+                                {% for message in messages %}
+                                    <p style="text-align: center; color: red">{{ message }}</p>
+                                {% endfor %}
+                                <!--Tab panes-->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade" id="tabs-login-1">
+                                        <!-- RD Mailform-->
+                                        <form method="post" action="{% url 'login' %}">
+                                            {% csrf_token %}
+                                            <div class="form-wrap">
+                                                <label class="form-label form-label-outside"
+                                                    for="form-login-username">Username:</label>
+                                                <input class="form-input bg-default" id="form-login-username"
+                                                    type="text" name="username" data-constraints="@Required">
+                                            </div>
+                                            <div class="form-wrap offset-top-15">
+                                                <label class="form-label form-label-outside"
+                                                    for="form-login-password">Password:</label>
+                                                <input class="form-input bg-default" id="form-login-password"
+                                                    type="password" name="password" data-constraints="@Required">
+                                            </div>
+
+                                                    <button class="btn button-primary d-block d-xl-inline-block"
+                                                    type="submit">Sign in</button>
+                                        </form>
+
+                                                <span
+                                                    class="inset-xl-left-20 align-middle small d-inline-block offset-top-20 offset-lg-top-0">or
+                                                    enter with</span>
+                                                <ul
+                                                    class="list-inline list-inline-xs list-inline-madison d-xl-inline-block inset-xl-left-10 inset-xxl-left-20 align-middle offset-top-15 offset-lg-top-0">
+                                                    <li><a class="icon icon-xxs fa fa-facebook icon-circle icon-gray-light-filled"
+                                                            href="#"></a></li>
+                                                    <li><a class="icon icon-xxs fa fa-twitter icon-circle icon-gray-light-filled"
+                                                            href="#"></a></li>
+                                                    <li><a class="icon icon-xxs fa fa-google icon-circle icon-gray-light-filled"
+                                                            href="#"></a></li>
+                                                </ul>
+
+
+                                    </div>
+                                    <div class="tab-pane fade" id="tabs-login-2">
+                                        <form method="post" action="{% url 'register' %}">
+                                            {% csrf_token %}
+                                            <div class="form-wrap">
+                                                <label class="form-label form-label-outside"
+                                                    for="form-register-username">Name:</label>
+                                                <input class="form-input bg-default" id="form-register-username"
+                                                    type="text" name="name" data-constraints="@Required">
+                                            </div>
+                                            <div class="form-wrap">
+                                                <label class="form-label form-label-outside"
+                                                    for="form-register-username">Username:</label>
+                                                <input class="form-input bg-default" id="form-register-username"
+                                                    type="text" name="username" data-constraints="@Required">
+                                            </div>
+                                            <div class="form-wrap offset-top-15">
+                                                <label class="form-label form-label-outside"
+                                                    for="form-register-email">Phone Number:</label>
+                                                <input class="form-input bg-default" id="form-register-email"
+                                                    type="text" name="phone_number" >
+                                            </div>
+                                            <div class="form-wrap offset-top-15">
+                                                <label class="form-label form-label-outside"
+                                                    for="form-register-password">Password:</label>
+                                                <input class="form-input bg-default" id="form-register-password"
+                                                    type="password" name="password" data-constraints="@Required">
+                                            </div>
+                                            <div class="form-wrap offset-top-15">
+                                                <label class="form-label form-label-outside"
+                                                    for="form-register-confirm-password">Confirm Password:</label>
+                                                <input class="form-input bg-default" id="form-register-confirm-password"
+                                                    type="password" name="confirm_password" data-constraints="@Required">
+                                            </div>
+                                            <div class="offset-top-20">
+                                                    <button class="btn button-primary d-block d-xl-inline-block"
+                                                    type="submit">Register</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Global Mailform Output-->
+        <div class="snackbars" id="form-output-global"></div>
+        <!-- Java script-->
+        <script src="{% static 'js/core.min.js' %}"></script>
+        <script src="{% static 'js/script.js'%}"></script>
+      </body>
+    </html>
