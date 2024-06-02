@@ -80,7 +80,7 @@
                     </li>
                     {% if user.is_authenticated %}
                     <li class="site-nav__item">
-                        <a class="site-nav__link" href="{% url 'logout' %}">Logout</a>
+                        <a class="site-nav__link" href="{% url 'logout' %}">Chiqish</a>
                     </li>
                     {% endif %}
                 </ul>
@@ -477,7 +477,98 @@
                     </div>
                   </section>
 
-                  <section class="kombo-section pizza-section">
+
+                <section class="kombo-section pizza-section">
+                    <h2 class="burger-section__title fast-food-section__title">
+                      Salat
+                    </h2>
+
+                    <div class="row">
+                        {% for salat in salats %}
+                      <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="pizza-card">
+                          <div class="pizza-card__start">
+                            <img
+                              class="pizza-card__img"
+                              src="{{ salat.image.url }}"
+                              srcset="
+                                {{ salat.image.url }}
+                                {{ salat.image.url }}
+                              "
+                              width="180"
+                              height="180"
+                              alt="{{ salat.name }}"
+                            />
+                          </div>
+                          <div class="pizza-card__end">
+                            <h3 class="pizza-card__title">{{ salat.name }}</h3>
+                            <p class="pizza-card__text">
+                              {{ salat.description }}
+                            </p>
+
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <p class="pizza-card__price">{{ salat.price }} UZS</p>
+
+                              <a href="{% url 'add_to_cart' salat.id %}"
+                                class="btn btn-warning pizza-btn">
+                                +
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                        {% endfor %}
+                    </div>
+                  </section>
+
+
+                <section class="kombo-section pizza-section">
+                    <h2 class="burger-section__title fast-food-section__title">
+                      Shirinliklar
+                    </h2>
+
+                    <div class="row">
+                        {% for sweet in sweets %}
+                      <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="pizza-card">
+                          <div class="pizza-card__start">
+                            <img
+                              class="pizza-card__img"
+                              src="{{ sweet.image.url }}"
+                              srcset="
+                                {{ sweet.image.url }}
+                                {{ sweet.image.url }}
+                              "
+                              width="180"
+                              height="180"
+                              alt="{{ sweet.name }}"
+                            />
+                          </div>
+                          <div class="pizza-card__end">
+                            <h3 class="pizza-card__title">{{ sweet.name }}</h3>
+                            <p class="pizza-card__text">
+                              {{ sweet.description }}
+                            </p>
+
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <p class="pizza-card__price">{{ sweet.price }} UZS</p>
+
+                              <a href="{% url 'add_to_cart' sweet.id %}"
+                                class="btn btn-warning pizza-btn">
+                                +
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                        {% endfor %}
+                    </div>
+                  </section>
+
                     <h2 class="burger-section__title fast-food-section__title">
                       Ichimliklar
                     </h2>
