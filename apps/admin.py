@@ -1,11 +1,9 @@
 from django.contrib import admin
 
-from apps.models import Pizza, Burger, Kombo, Salat, Sweet, Drink
+from apps.models import Product, Category, CartItem, User
 
 # Register your models here.
-admin.site.register(Pizza)
-admin.site.register(Burger)
-admin.site.register(Kombo)
-admin.site.register(Salat)
-admin.site.register(Sweet)
-admin.site.register(Drink)
+admin.site.register(Category)
+admin.site.register(Product)
+admin.site.register(CartItem)
+admin.site.register(User)

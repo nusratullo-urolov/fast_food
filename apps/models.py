@@ -1,61 +1,35 @@
+from django.contrib.auth.models import AbstractUser
 from django.db import models
-from django.db.models import Model, CharField, ImageField, PositiveIntegerField
+from django.db.models import Model, CharField, ImageField, PositiveIntegerField, ForeignKey, CASCADE
 
 
 # Create your models here.
-class Pizza(Model):
+
+
+class User(AbstractUser):
+    phone_number = CharField(max_length=255)
+
+class Category(Model):
     name = CharField(max_length=255)
-    description = CharField(max_length=255)
-    image = ImageField(upload_to='media/')
-    price = PositiveIntegerField()
 
     def __str__(self):
         return self.name
 
-
-class Burger(Model):
+class Product(Model):
     name = CharField(max_length=255)
     description = CharField(max_length=255)
     image = ImageField(upload_to='media/')
     price = PositiveIntegerField()
-
-    def __str__(self):
-        return self.name
-
-class Kombo(Model):
-    name = CharField(max_length=255)
-    description = CharField(max_length=255)
-    image = ImageField(upload_to='media/')
-    price = PositiveIntegerField()
-
+    category = ForeignKey('apps.Category', CASCADE)
     def __str__(self):
         return self.name
 
 
-class Salat(Model):
-    name = CharField(max_length=255)
-    description = CharField(max_length=255)
-    image = ImageField(upload_to='media/')
-    price = PositiveIntegerField()
+class CartItem(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(default=0)
 
     def __str__(self):
-        return self.name
+        return f"{self.quantity} of {self.product.name} for {self.user.first_name}"
 
-
-class Sweet(Model):
-    name = CharField(max_length=255)
-    description = CharField(max_length=255)
-    image = ImageField(upload_to='media/')
-    price = PositiveIntegerField()
-
-    def __str__(self):
-        return self.name
-
-class Drink(Model):
-    name = CharField(max_length=255)
-    description = CharField(max_length=255)
-    image = ImageField(upload_to='media/')
-    price = PositiveIntegerField()
-
-    def __str__(self):
-        return self.name
