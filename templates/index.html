@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -67,7 +67,7 @@
             <nav class="site-nav">
                 <ul class="site-nav__list">
                     <li class="site-nav__item">
-                        <a href="{% url 'show_cart' %}"><i class="fa badge fa-lg" value={{ total_quantity }}>&#xf07a;</i></a>
+                        <a class="site-nav__link" href="{% url 'show_cart' %}"><i style="font-size: 25px" class="fa badge fa-lg" value={{ total_quantity }}>&#xf07a;</i></a>
                     </li>
                     <li class="site-nav__item">
                         <a class="site-nav__link" href="#">Menyu</a>
@@ -611,9 +611,8 @@
                       </div>
                         {% endfor %}
                     </div>
-                  </section>
-                </div>
 
+                </div>
                 <div class="tab-pane container fade" id="pizza">
                   <section class="pizza-section">
                     <h2 class="pizza-section__title">Pitsa</h2>
@@ -667,7 +666,7 @@
                     </div>
                   </section>
                 </div>
-                <div class="tab-pane container fade" id="burger">
+                  <div class="tab-pane container fade" id="burger">
                   <section class="burger-section pizza-section">
                     <h2 class="burger-section__title fast-food-section__title">
                       Burger
@@ -813,8 +812,6 @@
                     </div>
                   </section>
                 </div>
-
-
                 <div class="tab-pane container fade" id="sweets">
                   <section class="kombo-section pizza-section">
                     <h2 class="burger-section__title fast-food-section__title">
@@ -906,17 +903,18 @@
                     </div>
                   </section>
                 </div>
+
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- PRODUCTS SECTION END -->
+        <!-- PRODUCTS SECTION END -->
     </main>
-    <!-- MAIN END -->
 
-    <!-- FOOTER START -->
-    <footer class="site-footer">
+
+    <!-- MAIN END -->
+        <footer class="site-footer">
       <!-- SITE FOOTER TOP START -->
       <section class="site-footer-top">
         <div class="container">
@@ -986,6 +984,7 @@
       </section>
       <!-- SITE FOOTER BOTTOM END -->
     </footer>
+    <!-- FOOTER START -->
     <!-- FOOTER END -->
 
     <script
