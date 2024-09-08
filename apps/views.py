@@ -47,7 +47,7 @@ def logout_view(request):
     logout(request)
     return redirect('login')
 
-# @login_required(login_url='/login')
+@login_required(login_url='/login')
 def index_view(request):
     pizza = get_object_or_404(Category, name='Pizza')
     pizzas = Product.objects.filter(category=pizza)
